@@ -1,0 +1,15 @@
+GET http:://127.0.0.1:8000/api/productos HTTP/1.1
+content-type: application/json
+
+POST http:://127.0.0.1:8000/api/productos HTTP/1.1
+content-type: application/json
+
+{
+    "producto" => "Paleta"
+        ,"existencias" => 20
+        ,"precio" => 3
+        ,"fotografia" "paleta.jpg"
+        ,"descripcion" "Paleta de caramelo macizo"
+        ,"estatus" "Activo"
+        ,"iva" 16
+}

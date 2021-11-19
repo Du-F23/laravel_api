@@ -37,7 +37,9 @@ class ProductoController extends Controller
      */
     public function store(StoreProductoRequest $request)
     {
-        //
+        $request->validated(Producto::$reglas());
+        $producto = Producto::create($request->all());
+        return response()->json($producto);
     }
 
     /**
@@ -48,7 +50,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
-        //
+        return response()->json($producto);
     }
 
     /**
